@@ -19,7 +19,7 @@ const (
 	ADMIN
 )
 
-const StaticHashSalt = "https://github.com/alist-org/alist"
+const StaticHashSalt = "https://github.com/NewAlist/alist"
 
 type User struct {
 	ID       uint   `json:"id" gorm:"primaryKey"`                      // unique key
@@ -177,5 +177,5 @@ func (u *User) WebAuthnCredentials() []webauthn.Credential {
 }
 
 func (u *User) WebAuthnIcon() string {
-	return "https://alist.nn.ci/logo.svg"
+	return "https://doc.newalist.top/logo.svg"
 }
