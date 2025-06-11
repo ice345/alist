@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://alist.nn.ci"><img width="100px" alt="logo" src="https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg"/></a>
+  <a href="https://doc.newalist.top"><img width="100px" alt="logo" src="https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg"/></a>
   <p><em>🗂一个支持多存储的文件列表程序，使用 Gin 和 Solidjs。</em></p>
 <div>
   <a href="https://goreportcard.com/report/github.com/alist-org/alist/v3">
@@ -31,7 +31,7 @@
   <a href="https://hub.docker.com/r/xhofe/alist">
     <img src="https://img.shields.io/docker/pulls/xhofe/alist?color=%2348BB78&logo=docker&label=pulls" alt="Downloads" />
   </a>
-  <a href="https://alist.nn.ci/zh/guide/sponsor.html">
+  <a href="https://doc.newalist.top/zh/guide/sponsor.html">
     <img src="https://img.shields.io/badge/%24-sponsor-F87171.svg" alt="sponsor" />
   </a>
 </div>
@@ -86,7 +86,7 @@
 - [x] 黑暗模式
 - [x] 国际化
 - [x] 受保护的路由（密码保护和身份验证）
-- [x] WebDav (具体见 https://alist.nn.ci/zh/guide/webdav.html)
+- [x] WebDav (具体见 https://doc.newalist.top/zh/guide/webdav.html)
 - [x] [Docker 部署](https://hub.docker.com/r/xhofe/alist)
 - [x] Cloudflare workers 中转
 - [x] 文件/文件夹打包下载
@@ -97,7 +97,7 @@
 
 ## 文档
 
-<https://alist.nn.ci/zh/>
+<https://doc.newalist.top/zh/>
 
 ## Demo
 
@@ -109,7 +109,7 @@
 
 ## 赞助
 
-AList 是一个开源软件，如果你碰巧喜欢这个项目，并希望我继续下去，请考虑赞助我或提供一个单一的捐款！感谢所有的爱和支持：https://alist.nn.ci/zh/guide/sponsor.html
+AList 是一个开源软件，如果你碰巧喜欢这个项目，并希望我继续下去，请考虑赞助我或提供一个单一的捐款！感谢所有的爱和支持：https://doc.newalist.top/zh/guide/sponsor.html
 
 ### 特别赞助
 
