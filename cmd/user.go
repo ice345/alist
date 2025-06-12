@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/internal/setting"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/internal/setting"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/go-resty/resty/v2"
 )
 
