@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/alist-org/alist/v3/cmd/flags"
-	_ "github.com/alist-org/alist/v3/drivers"
-	_ "github.com/alist-org/alist/v3/internal/archive"
-	_ "github.com/alist-org/alist/v3/internal/offline_download"
+	"github.com/NewAlist/alist/cmd/flags"
+	_ "github.com/NewAlist/alist/drivers"
+	_ "github.com/NewAlist/alist/internal/archive"
+	_ "github.com/NewAlist/alist/internal/offline_download"
 	"github.com/spf13/cobra"
 )
 
