@@ -21,7 +21,7 @@ import (
 	"github.com/NewAlist/alist/internal/sign"
 	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/NewAlist/alist/server/common"
-	"github.com/alist-org/times"
+	"github.com/NewAlist/times"
 	cp "github.com/otiai10/copy"
 	log "github.com/sirupsen/logrus"
 	_ "golang.org/x/image/webp"
