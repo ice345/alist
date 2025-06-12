@@ -13,7 +13,7 @@ import (
 	"github.com/NewAlist/alist/internal/model"
 	"github.com/NewAlist/alist/internal/op"
 	"github.com/NewAlist/alist/internal/setting"
-	"github.com/alist-org/gofakes3"
+	"github.com/NewAlist/gofakes3"
 )
 
 type Bucket struct {
