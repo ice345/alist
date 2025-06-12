@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://doc.newalist.top"><img width="100px" alt="logo" src="https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg"/></a>
+  <a href="https://doc.newalist.top"><img width="100px" alt="logo" src="https://doc.newalist.top/logo.svg"/></a>
   <p><em>🗂一个支持多存储的文件列表程序，使用 Gin 和 Solidjs。</em></p>
 <div>
   <a href="https://goreportcard.com/report/github.com/NewAlist/alist/v3">
@@ -116,7 +116,7 @@ AList 是一个开源软件，如果你碰巧喜欢这个项目，并希望我�
 
 Thanks goes to these wonderful people:
 
-[![Contributors](http://contrib.nn.ci/api?repo=NewAlist/alist&repo=NewAlist/alist-web&repo=alist-org/docs)](https://github.com/NewAlist/alist/graphs/contributors)
+[![Contributors](http://contrib.nn.ci/api?repo=NewAlist/alist&repo=NewAlist/alist-web&repo=NewAlist/docs)](https://github.com/NewAlist/alist/graphs/contributors)
 
 ## 许可
 
@@ -131,4 +131,4 @@ Thanks goes to these wonderful people:
 
 ---
 
-> [@博客](https://nn.ci/) · [@GitHub](https://github.com/alist-org) · [@Telegram群](https://t.me/alist_chat) · [@Discord](https://discord.gg/F4ymsH4xv2)
+> [@GitHub](https://github.com/NewAlist) 
