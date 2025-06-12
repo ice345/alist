@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://doc.newalist.top"><img width="100px" alt="logo" src="https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg"/></a>
+  <a href="https://doc.newalist.top"><img width="100px" alt="logo" src="https://doc.newalist.top/logo.svg"/></a>
   <p><em>🗂️A file list program that supports multiple storages, powered by Gin and Solidjs.</em></p>
 <div>
   <a href="https://goreportcard.com/report/github.com/NewAlist/alist/v3">
@@ -119,7 +119,7 @@ https://doc.newalist.top/guide/sponsor.html
 
 Thanks goes to these wonderful people:
 
-[![Contributors](http://contrib.nn.ci/api?repo=NewAlist/alist&repo=NewAlist/alist-web&repo=alist-org/docs)](https://github.com/NewAlist/alist/graphs/contributors)
+[![Contributors](http://contrib.nn.ci/api?repo=NewAlist/alist&repo=NewAlist/alist-web&repo=NewAlist/docs)](https://github.com/NewAlist/alist/graphs/contributors)
 
 ## License
 
