@@ -119,7 +119,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
-          repository: alist-org/desktop-release
+          repository: NewAlist/desktop-release
           ref: main
           persist-credentials: false
           fetch-depth: 0
