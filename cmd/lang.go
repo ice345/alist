@@ -1,6 +1,6 @@
 /*
 Package cmd
-Copyright © 2022 Noah Hsu<i@nn.ci>
+Copyright © 2022 Noah Hsu<i@newalist.top>
 */
 package cmd
 

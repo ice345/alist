@@ -1,6 +1,6 @@
 appName="alist"
 builtAt="$(date +'%F %T %z')"
-gitAuthor="Xhofe <i@nn.ci>"
+gitAuthor="Xhofe <i@newalist.top>"
 gitCommit=$(git log --pretty=format:"%h" -1)
 
 if [ "$1" = "dev" ]; then
