@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/NewAlist/alist/pkg/utils"
-	"github.com/alist-org/gofakes3"
+	"github.com/NewAlist/gofakes3"
 )
 
 // logger output formatted message
