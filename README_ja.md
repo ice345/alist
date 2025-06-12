@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://doc.newalist.top"><img width="100px" alt="logo" src="https://cdn.jsdelivr.net/gh/alist-org/logo@main/logo.svg"/></a>
+  <a href="https://doc.newalist.top"><img width="100px" alt="logo" src="https://doc.newalist.top/logo.svg"/></a>
   <p><em>🗂️Gin と Solidjs による、複数のストレージをサポートするファイルリストプログラム。</em></p>
 <div>
   <a href="https://goreportcard.com/report/github.com/NewAlist/alist/v3">
@@ -118,7 +118,7 @@ https://doc.newalist.top/guide/sponsor.html
 
 これらの素晴らしい人々に感謝します:
 
-[![Contributors](http://contrib.nn.ci/api?repo=NewAlist/alist&repo=NewAlist/alist-web&repo=alist-org/docs)](https://github.com/NewAlist/alist/graphs/contributors)
+[![Contributors](http://contrib.nn.ci/api?repo=NewAlist/alist&repo=NewAlist/alist-web&repo=NewAlist/docs)](https://github.com/NewAlist/alist/graphs/contributors)
 
 ## ライセンス
 
@@ -133,4 +133,4 @@ https://doc.newalist.top/guide/sponsor.html
 
 ---
 
-> [@Blog](https://nn.ci/) · [@GitHub](https://github.com/alist-org) · [@TelegramGroup](https://t.me/alist_chat) · [@Discord](https://discord.gg/F4ymsH4xv2)
+> [@GitHub](https://github.com/NewAlist) 
