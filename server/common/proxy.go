@@ -11,11 +11,11 @@ import (
 
 	"maps"
 
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/net"
-	"github.com/alist-org/alist/v3/internal/stream"
-	"github.com/alist-org/alist/v3/pkg/http_range"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/net"
+	"github.com/NewAlist/alist/internal/stream"
+	"github.com/NewAlist/alist/pkg/http_range"
+	"github.com/NewAlist/alist/pkg/utils"
 	log "github.com/sirupsen/logrus"
 )
 

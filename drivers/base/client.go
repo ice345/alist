@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/net"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/net"
 	"github.com/go-resty/resty/v2"
 )
 

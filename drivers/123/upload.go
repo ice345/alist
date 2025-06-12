@@ -7,10 +7,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/alist-org/alist/v3/drivers/base"
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/drivers/base"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/go-resty/resty/v2"
 )
 

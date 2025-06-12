@@ -11,9 +11,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/disintegration/imaging"
 	ffmpeg "github.com/u2takey/ffmpeg-go"
 )

@@ -6,13 +6,13 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/alist-org/alist/v3/internal/errs"
+	"github.com/NewAlist/alist/internal/errs"
 
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/offline_download/tool"
-	"github.com/alist-org/alist/v3/internal/setting"
-	"github.com/alist-org/alist/v3/pkg/aria2/rpc"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/offline_download/tool"
+	"github.com/NewAlist/alist/internal/setting"
+	"github.com/NewAlist/alist/pkg/aria2/rpc"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 )

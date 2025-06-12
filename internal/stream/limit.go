@@ -2,9 +2,9 @@ package stream
 
 import (
 	"context"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/pkg/http_range"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/pkg/http_range"
+	"github.com/NewAlist/alist/pkg/utils"
 	"golang.org/x/time/rate"
 	"io"
 	"time"

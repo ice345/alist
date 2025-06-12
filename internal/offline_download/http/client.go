@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/offline_download/tool"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/offline_download/tool"
+	"github.com/NewAlist/alist/pkg/utils"
 )
 
 type SimpleHttp struct {

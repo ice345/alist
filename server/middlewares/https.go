@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/alist-org/alist/v3/internal/conf"
+	"github.com/NewAlist/alist/internal/conf"
 	"github.com/gin-gonic/gin"
 )
 

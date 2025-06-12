@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/pkg/utils"
 
-	_ "github.com/alist-org/alist/v3/internal/model"
+	_ "github.com/NewAlist/alist/internal/model"
 )
 
 func (f *File) UnmarshalJSON(data []byte) error {

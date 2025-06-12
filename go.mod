@@ -1,4 +1,4 @@
-module github.com/alist-org/alist/v3
+module github.com/NewAlist/alist
 
 go 1.23.4
 

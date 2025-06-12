@@ -1,7 +1,7 @@
 package smb
 
 import (
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/pkg/utils"
 	"io/fs"
 	"net"
 	"os"

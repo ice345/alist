@@ -3,8 +3,8 @@ package LenovoNasShare
 import (
 	"errors"
 
-	"github.com/alist-org/alist/v3/drivers/base"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/drivers/base"
+	"github.com/NewAlist/alist/pkg/utils"
 	jsoniter "github.com/json-iterator/go"
 )
 

@@ -2,14 +2,14 @@ package febbox
 
 import (
 	"context"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/pkg/utils"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
 
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
 )
 
 type FebBox struct {

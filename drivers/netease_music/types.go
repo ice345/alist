@@ -8,13 +8,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/sign"
-	"github.com/alist-org/alist/v3/pkg/http_range"
-	"github.com/alist-org/alist/v3/pkg/utils"
-	"github.com/alist-org/alist/v3/pkg/utils/random"
-	"github.com/alist-org/alist/v3/server/common"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/sign"
+	"github.com/NewAlist/alist/pkg/http_range"
+	"github.com/NewAlist/alist/pkg/utils"
+	"github.com/NewAlist/alist/pkg/utils/random"
+	"github.com/NewAlist/alist/server/common"
 )
 
 type HostsResp struct {

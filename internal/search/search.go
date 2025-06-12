@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/internal/search/searcher"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/internal/search/searcher"
 	log "github.com/sirupsen/logrus"
 )
 

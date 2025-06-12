@@ -4,12 +4,12 @@ import (
 	"path"
 	"strings"
 
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/internal/search"
-	"github.com/alist-org/alist/v3/pkg/utils"
-	"github.com/alist-org/alist/v3/server/common"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/internal/search"
+	"github.com/NewAlist/alist/pkg/utils"
+	"github.com/NewAlist/alist/server/common"
 	"github.com/gin-gonic/gin"
 	"github.com/pkg/errors"
 )

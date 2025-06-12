@@ -5,11 +5,11 @@ import (
 	log "github.com/sirupsen/logrus"
 	"io"
 
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/internal/task"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/internal/task"
 	"github.com/pkg/errors"
 )
 

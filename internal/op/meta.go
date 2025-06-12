@@ -5,11 +5,11 @@ import (
 	"time"
 
 	"github.com/Xhofe/go-cache"
-	"github.com/alist-org/alist/v3/internal/db"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/pkg/singleflight"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/db"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/pkg/singleflight"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/pkg/errors"
 	"gorm.io/gorm"
 )

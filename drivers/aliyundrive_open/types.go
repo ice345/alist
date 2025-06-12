@@ -1,10 +1,10 @@
 package aliyundrive_open
 
 import (
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/pkg/utils"
 	"time"
 
-	"github.com/alist-org/alist/v3/internal/model"
+	"github.com/NewAlist/alist/internal/model"
 )
 
 type ErrResp struct {

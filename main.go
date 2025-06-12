@@ -1,6 +1,6 @@
 package main
 
-import "github.com/alist-org/alist/v3/cmd"
+import "github.com/NewAlist/alist/cmd"
 
 func main() {
 	cmd.Execute()

@@ -1,15 +1,15 @@
 package handles
 
 import (
-	_115 "github.com/alist-org/alist/v3/drivers/115"
-	"github.com/alist-org/alist/v3/drivers/pikpak"
-	"github.com/alist-org/alist/v3/drivers/thunder"
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/offline_download/tool"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/internal/task"
-	"github.com/alist-org/alist/v3/server/common"
+	_115 "github.com/NewAlist/alist/drivers/115"
+	"github.com/NewAlist/alist/drivers/pikpak"
+	"github.com/NewAlist/alist/drivers/thunder"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/offline_download/tool"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/internal/task"
+	"github.com/NewAlist/alist/server/common"
 	"github.com/gin-gonic/gin"
 )
 

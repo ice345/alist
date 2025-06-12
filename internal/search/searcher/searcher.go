@@ -3,7 +3,7 @@ package searcher
 import (
 	"context"
 
-	"github.com/alist-org/alist/v3/internal/model"
+	"github.com/NewAlist/alist/internal/model"
 )
 
 type Config struct {

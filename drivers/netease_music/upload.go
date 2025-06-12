@@ -4,14 +4,14 @@ import (
 	"context"
 	"crypto/md5"
 	"encoding/hex"
-	"github.com/alist-org/alist/v3/internal/driver"
+	"github.com/NewAlist/alist/internal/driver"
 	"io"
 	"net/http"
 	"strconv"
 	"strings"
 
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/dhowden/tag"
 )
 

@@ -5,9 +5,9 @@ import (
 	_ "net/http/pprof"
 	"runtime"
 
-	"github.com/alist-org/alist/v3/internal/sign"
-	"github.com/alist-org/alist/v3/server/common"
-	"github.com/alist-org/alist/v3/server/middlewares"
+	"github.com/NewAlist/alist/internal/sign"
+	"github.com/NewAlist/alist/server/common"
+	"github.com/NewAlist/alist/server/middlewares"
 	"github.com/gin-gonic/gin"
 )
 

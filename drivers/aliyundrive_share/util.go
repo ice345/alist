@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/alist-org/alist/v3/drivers/base"
-	"github.com/alist-org/alist/v3/internal/op"
+	"github.com/NewAlist/alist/drivers/base"
+	"github.com/NewAlist/alist/internal/op"
 	log "github.com/sirupsen/logrus"
 )
 

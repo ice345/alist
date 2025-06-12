@@ -10,14 +10,14 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/alist-org/alist/v3/drivers/base"
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
-	streamPkg "github.com/alist-org/alist/v3/internal/stream"
-	"github.com/alist-org/alist/v3/pkg/cron"
-	"github.com/alist-org/alist/v3/pkg/utils"
-	"github.com/alist-org/alist/v3/pkg/utils/random"
+	"github.com/NewAlist/alist/drivers/base"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
+	streamPkg "github.com/NewAlist/alist/internal/stream"
+	"github.com/NewAlist/alist/pkg/cron"
+	"github.com/NewAlist/alist/pkg/utils"
+	"github.com/NewAlist/alist/pkg/utils/random"
 	log "github.com/sirupsen/logrus"
 )
 

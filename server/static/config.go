@@ -3,8 +3,8 @@ package static
 import (
 	"strings"
 
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/pkg/utils"
 )
 
 type SiteConfig struct {

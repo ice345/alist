@@ -18,8 +18,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/pkg/utils/random"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/pkg/utils/random"
 )
 
 func clientSuffix() map[string]string {

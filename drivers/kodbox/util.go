@@ -2,8 +2,8 @@ package kodbox
 
 import (
 	"fmt"
-	"github.com/alist-org/alist/v3/drivers/base"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/drivers/base"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/go-resty/resty/v2"
 	"strings"
 )

@@ -3,15 +3,15 @@ package quark_uc_tv
 import (
 	"context"
 	"fmt"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/go-resty/resty/v2"
 	"strconv"
 	"time"
 
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
 )
 
 type QuarkUCTV struct {

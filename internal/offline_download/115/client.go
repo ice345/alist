@@ -3,14 +3,14 @@ package _115
 import (
 	"context"
 	"fmt"
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/setting"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/setting"
 
-	"github.com/alist-org/alist/v3/drivers/115"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/offline_download/tool"
-	"github.com/alist-org/alist/v3/internal/op"
+	"github.com/NewAlist/alist/drivers/115"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/offline_download/tool"
+	"github.com/NewAlist/alist/internal/op"
 )
 
 type Cloud115 struct {

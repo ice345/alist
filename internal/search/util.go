@@ -3,14 +3,14 @@ package search
 import (
 	"strings"
 
-	"github.com/alist-org/alist/v3/drivers/alist_v3"
-	"github.com/alist-org/alist/v3/drivers/base"
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/op"
-	"github.com/alist-org/alist/v3/internal/setting"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/drivers/alist_v3"
+	"github.com/NewAlist/alist/drivers/base"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/op"
+	"github.com/NewAlist/alist/internal/setting"
+	"github.com/NewAlist/alist/pkg/utils"
 	log "github.com/sirupsen/logrus"
 )
 

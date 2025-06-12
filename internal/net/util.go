@@ -10,9 +10,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/pkg/utils"
 
-	"github.com/alist-org/alist/v3/pkg/http_range"
+	"github.com/NewAlist/alist/pkg/http_range"
 	log "github.com/sirupsen/logrus"
 )
 

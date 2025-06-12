@@ -3,9 +3,9 @@ package meilisearch
 import (
 	"context"
 	"fmt"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/search/searcher"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/search/searcher"
+	"github.com/NewAlist/alist/pkg/utils"
 	"github.com/google/uuid"
 	"github.com/meilisearch/meilisearch-go"
 	"path"

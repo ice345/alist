@@ -3,9 +3,9 @@ package bootstrap
 import (
 	"fmt"
 
-	"github.com/alist-org/alist/v3/internal/bootstrap/patch"
-	"github.com/alist-org/alist/v3/internal/conf"
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/internal/bootstrap/patch"
+	"github.com/NewAlist/alist/internal/conf"
+	"github.com/NewAlist/alist/pkg/utils"
 	"strings"
 )
 

@@ -3,8 +3,8 @@ package op_test
 import (
 	"testing"
 
-	_ "github.com/alist-org/alist/v3/drivers"
-	"github.com/alist-org/alist/v3/internal/op"
+	_ "github.com/NewAlist/alist/drivers"
+	"github.com/NewAlist/alist/internal/op"
 )
 
 func TestDriverItemsMap(t *testing.T) {

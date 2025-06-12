@@ -1,8 +1,8 @@
 package quark
 
 import (
-	"github.com/alist-org/alist/v3/internal/driver"
-	"github.com/alist-org/alist/v3/internal/op"
+	"github.com/NewAlist/alist/internal/driver"
+	"github.com/NewAlist/alist/internal/op"
 )
 
 type Addition struct {

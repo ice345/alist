@@ -1,10 +1,10 @@
 package iso9660
 
 import (
-	"github.com/alist-org/alist/v3/internal/archive/tool"
-	"github.com/alist-org/alist/v3/internal/errs"
-	"github.com/alist-org/alist/v3/internal/model"
-	"github.com/alist-org/alist/v3/internal/stream"
+	"github.com/NewAlist/alist/internal/archive/tool"
+	"github.com/NewAlist/alist/internal/errs"
+	"github.com/NewAlist/alist/internal/model"
+	"github.com/NewAlist/alist/internal/stream"
 	"github.com/kdomanski/iso9660"
 	"io"
 	"os"

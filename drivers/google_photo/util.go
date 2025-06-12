@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/alist-org/alist/v3/drivers/base"
+	"github.com/NewAlist/alist/drivers/base"
 	"github.com/go-resty/resty/v2"
 )
 

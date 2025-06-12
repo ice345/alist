@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/alist-org/alist/v3/pkg/utils"
+	"github.com/NewAlist/alist/pkg/utils"
 
-	"github.com/alist-org/alist/v3/internal/model"
+	"github.com/NewAlist/alist/internal/model"
 )
 
 type TokenErrResp struct {
