@@ -21,7 +21,7 @@ import (
 	"github.com/NewAlist/alist/internal/stream"
 	"github.com/NewAlist/alist/pkg/http_range"
 	"github.com/NewAlist/alist/pkg/utils"
-	"github.com/alist-org/gofakes3"
+	"github.com/NewAlist/gofakes3"
 	"github.com/ncw/swift/v2"
 	log "github.com/sirupsen/logrus"
 )
