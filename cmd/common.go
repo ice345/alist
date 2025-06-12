@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"strconv"
 
-	github.com/NewAlist/alist/internal/bootstrap"
+	"github.com/NewAlist/alist/internal/bootstrap"
 	"github.com/NewAlist/alist/internal/bootstrap/data"
 	"github.com/NewAlist/alist/internal/db"
 	"github.com/NewAlist/alist/pkg/utils"
