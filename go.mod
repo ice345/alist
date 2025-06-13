@@ -1,6 +1,6 @@
 module github.com/NewAlist/alist
 
-go 1.23.4
+go 1.23
 
 require (
 	github.com/KirCute/ftpserverlib-pasvportmap v1.25.0
