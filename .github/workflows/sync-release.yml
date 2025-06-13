@@ -29,15 +29,15 @@ jobs:
 
       - name: Build Linux amd64 binary
         run: |
-          GOOS=linux GOARCH=amd64 go build -o alist-linux-amd64 ./cmd/alist
+          GOOS=linux GOARCH=amd64 go build -o alist-linux-amd64 ./cmd
 
       - name: Build Windows amd64 binary
         run: |
-          GOOS=windows GOARCH=amd64 go build -o alist-windows-amd64.exe ./cmd/alist
+          GOOS=windows GOARCH=amd64 go build -o alist-windows-amd64.exe ./cmd
 
       - name: Build macOS amd64 binary
         run: |
-          GOOS=darwin GOARCH=amd64 go build -o alist-darwin-amd64 ./cmd/alist
+          GOOS=darwin GOARCH=amd64 go build -o alist-darwin-amd64 ./cmd
 
       - name: Set tag name
         run: echo "TAG_NAME=v$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
