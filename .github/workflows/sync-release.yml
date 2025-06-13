@@ -1,4 +1,4 @@
-name: Sync Alist Release Assets and Create Release
+name: Build and Release Alist
 
 on:
   workflow_dispatch:
@@ -9,38 +9,29 @@ env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
-  sync-assets:
+  build-and-release:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout this repo
         uses: actions/checkout@v4
 
-      - name: Checkout NewAlist upstream
-        uses: actions/checkout@v4
+      - name: Set up Go
+        uses: actions/setup-go@v4
         with:
-          repository: NewAlist/alist
-          path: upstream
+          go-version: '1.20'  # 根据Alist需要设置go版本
 
-      - name: Download release assets
+      - name: Build Linux amd64 binary
         run: |
-          mkdir -p root
-          cd upstream
-          for TAG in $(git tag); do
-            mkdir -p "../root/$TAG"
-            gh release download "$TAG" --repo NewAlist/alist -D "../root/$TAG"
-          done
+          GOOS=linux GOARCH=amd64 go build -o alist-linux-amd64 ./cmd/alist  # 这里的 ./cmd/alist 改成实际主程序路径
 
-      - name: Sync assets to my repo
-        uses: at-wat/assets-sync-action@v0.6.7
-        with:
-          repos: ice345/alist
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          git_user: ice345-bot
-          git_email: ice345@example.com
-          commit_message: "Sync Alist release assets from NewAlist/alist"
-          branch: sync-release-assets
-          root_dir: root
+      - name: Build Windows amd64 binary
+        run: |
+          GOOS=windows GOARCH=amd64 go build -o alist-windows-amd64.exe ./cmd/alist
+
+      - name: Build macOS amd64 binary
+        run: |
+          GOOS=darwin GOARCH=amd64 go build -o alist-darwin-amd64 ./cmd/alist
 
       - name: Set tag name
         run: echo "TAG_NAME=v$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
@@ -52,14 +43,18 @@ jobs:
           git tag $TAG_NAME
           git push origin $TAG_NAME
 
-      - name: Create GitHub release
+      - name: Create GitHub Release and upload binaries
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ env.TAG_NAME }}
           name: Release ${{ env.TAG_NAME }}
           body: Automated release created by GitHub Actions
+          files: |
+            alist-linux-amd64
+            alist-windows-amd64.exe
+            alist-darwin-amd64
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cleanup
-        run: rm -rf root upstream
+        run: rm -f alist-linux-amd64 alist-windows-amd64.exe alist-darwin-amd64
