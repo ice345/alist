@@ -1,24 +1,44 @@
-name: Sync Releases from NewAlist
+name: Sync Alist Release Assets
 
 on:
-  workflow_dispatch:   # 手动触发
+  workflow_dispatch:         # 支持手动触发
   schedule:
-    - cron: '0 3 * * *'  # 每天凌晨3点自动同步（可自行修改）
+    - cron: '0 3 * * *'      # 每天 03:00 UTC 自动运行（约新加坡时间 11:00）
 
 jobs:
-  sync:
+  sync-assets:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout self
-        uses: actions/checkout@v3
 
-      - name: Sync Releases
-        uses: Yikun/actions-sync-release@v1
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v4
+
+      - name: Checkout NewAlist upstream
+        uses: actions/checkout@v4
         with:
-          source_repo: "NewAlist/alist"
-          target_repo: "ice345/alist"
-          github_token: "${{ secrets.GH_TOKEN }}"
-          sync_release: true
-          sync_tag: true
-          sync_asset: true
-          overwrite: true
+          repository: NewAlist/alist
+          path: upstream
+
+      - name: Download release assets
+        run: |
+          mkdir -p root
+          cd upstream
+          # 遍历所有 tags，下载对应 assets 到 ../root/<tag>/
+          for TAG in $(git tag); do
+            mkdir -p "../root/$TAG"
+            gh release download "$TAG" --repo NewAlist/alist -D "../root/$TAG"
+          done
+
+      - name: Sync assets to my repo
+        uses: at-wat/assets-sync-action@v0.6.7
+        with:
+          repos: ice345/alist
+          github_token: ${{ secrets.GH_TOKEN }}
+          git_user: ice345-bot
+          git_email: ice345@example.com
+          commit_message: "Sync Alist release assets from NewAlist/alist"
+          branch: sync-release-assets
+          root_dir: root
+
+      - name: Cleanup
+        run: rm -rf root upstream
