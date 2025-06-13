@@ -21,17 +21,23 @@ jobs:
         with:
           go-version: '1.20'  # 根据Alist需要设置go版本
 
+      - name: Clean Go module cache and dependencies
+        run: |
+          go clean -modcache
+          rm -f go.sum
+          go mod tidy
+
       - name: Build Linux amd64 binary
         run: |
-          GOOS=linux GOARCH=amd64 go build -o alist-linux-amd64 ./cmd  # 这里的 ./cmd 改成实际主程序路径
+          GOOS=linux GOARCH=amd64 go build -o alist-linux-amd64 ./cmd/alist
 
       - name: Build Windows amd64 binary
         run: |
-          GOOS=windows GOARCH=amd64 go build -o alist-windows-amd64.exe ./cmd
+          GOOS=windows GOARCH=amd64 go build -o alist-windows-amd64.exe ./cmd/alist
 
       - name: Build macOS amd64 binary
         run: |
-          GOOS=darwin GOARCH=amd64 go build -o alist-darwin-amd64 ./cmd
+          GOOS=darwin GOARCH=amd64 go build -o alist-darwin-amd64 ./cmd/alist
 
       - name: Set tag name
         run: echo "TAG_NAME=v$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
