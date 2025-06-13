@@ -1,66 +1,78 @@
-name: Build and Release Alist
+name: Sync Releases from NewAlist/alist
 
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 3 * * *'
 
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+permissions:
+  contents: write
+  packages: write
+  releases: write
 
 jobs:
-  build-and-release:
+  sync-releases:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout this repo
+      - name: Checkout your repo
         uses: actions/checkout@v4
 
-      - name: Set up Go
-        uses: actions/setup-go@v4
+      - name: Checkout upstream repo
+        uses: actions/checkout@v4
         with:
-          go-version: '1.20'  # 根据Alist需要设置go版本
+          repository: NewAlist/alist
+          path: upstream
 
-      - name: Clean Go module cache and dependencies
+      - name: Setup GitHub CLI
+        uses: cli/cli-action@v2
+
+      - name: Get all tags from upstream repo
+        id: get_tags
         run: |
-          go clean -modcache
-          rm -f go.sum
-          go mod tidy
+          cd upstream
+          git fetch --tags
+          TAGS=$(git tag)
+          echo "tags=$TAGS" >> $GITHUB_OUTPUT
 
-      - name: Build Linux amd64 binary
-        run: |
-          GOOS=linux GOARCH=amd64 go build -o alist-linux-amd64 ./cmd
-
-      - name: Build Windows amd64 binary
-        run: |
-          GOOS=windows GOARCH=amd64 go build -o alist-windows-amd64.exe ./cmd
-
-      - name: Build macOS amd64 binary
-        run: |
-          GOOS=darwin GOARCH=amd64 go build -o alist-darwin-amd64 ./cmd
-
-      - name: Set tag name
-        run: echo "TAG_NAME=v$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
-
-      - name: Create git tag
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git tag $TAG_NAME
-          git push origin $TAG_NAME
-
-      - name: Create GitHub Release and upload binaries
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ env.TAG_NAME }}
-          name: Release ${{ env.TAG_NAME }}
-          body: Automated release created by GitHub Actions
-          files: |
-            alist-linux-amd64
-            alist-windows-amd64.exe
-            alist-darwin-amd64
+      - name: Download and sync releases
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          cd upstream
+          # 创建临时工作目录
+          mkdir -p ../release-assets
+          IFS=' ' read -r -a tag_array <<< "${{ steps.get_tags.outputs.tags }}"
+          
+          for TAG in "${tag_array[@]}"
+          do
+            echo "Processing release tag: $TAG"
+            # 获取 release 信息JSON
+            RELEASE_JSON=$(gh release view "$TAG" --repo NewAlist/alist --json tagName,name,body --jq '.')
+            if [ -z "$RELEASE_JSON" ]; then
+              echo "No release found for tag $TAG, skip."
+              continue
+            fi
+            # 下载release资产
+            mkdir -p "../release-assets/$TAG"
+            gh release download "$TAG" --repo NewAlist/alist -D "../release-assets/$TAG"
 
-      - name: Cleanup
-        run: rm -f alist-linux-amd64 alist-windows-amd64.exe alist-darwin-amd64
+            # 切换到你的repo根目录准备上传release
+            cd ../
+            # 创建或更新 Release（如果存在则更新）
+            gh release view "$TAG" --repo $GITHUB_REPOSITORY > /dev/null 2>&1
+            if [ $? -eq 0 ]; then
+              echo "Release $TAG exists, updating..."
+              gh release upload "$TAG" --repo $GITHUB_REPOSITORY ../release-assets/$TAG/* --clobber
+            else
+              # 取上游release名字和body
+              RELEASE_NAME=$(echo "$RELEASE_JSON" | jq -r '.name')
+              RELEASE_BODY=$(echo "$RELEASE_JSON" | jq -r '.body')
+              echo "Creating release $TAG"
+              gh release create "$TAG" ../release-assets/$TAG/* --repo $GITHUB_REPOSITORY -t "$RELEASE_NAME" -n "$RELEASE_BODY"
+            fi
+
+            # 返回upstream目录准备处理下一个
+            cd upstream
+          done
