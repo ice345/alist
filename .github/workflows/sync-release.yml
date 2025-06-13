@@ -24,7 +24,7 @@ jobs:
           path: upstream
 
       - name: Setup GitHub CLI
-        uses: cli/cli-action@v2
+        uses: cli/cli@v2
 
       - name: Get all tags from upstream repo
         id: get_tags
