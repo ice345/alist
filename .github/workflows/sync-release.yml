@@ -1,0 +1,24 @@
+name: Sync Releases from NewAlist
+
+on:
+  workflow_dispatch:   # 手动触发
+  schedule:
+    - cron: '0 3 * * *'  # 每天凌晨3点自动同步（可自行修改）
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout self
+        uses: actions/checkout@v3
+
+      - name: Sync Releases
+        uses: Yikun/actions-sync-release@v1
+        with:
+          source_repo: "NewAlist/alist"
+          target_repo: "ice345/alist"
+          github_token: "${{ secrets.GH_TOKEN }}"
+          sync_release: true
+          sync_tag: true
+          sync_asset: true
+          overwrite: true
