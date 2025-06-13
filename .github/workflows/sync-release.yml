@@ -1,9 +1,9 @@
 name: Sync Alist Release Assets
 
 on:
-  workflow_dispatch:         # 支持手动触发
+  workflow_dispatch:
   schedule:
-    - cron: '0 3 * * *'      # 每天 03:00 UTC 自动运行（约新加坡时间 11:00）
+    - cron: '0 3 * * *'
 
 jobs:
   sync-assets:
@@ -23,7 +23,6 @@ jobs:
         run: |
           mkdir -p root
           cd upstream
-          # 遍历所有 tags，下载对应 assets 到 ../root/<tag>/
           for TAG in $(git tag); do
             mkdir -p "../root/$TAG"
             gh release download "$TAG" --repo NewAlist/alist -D "../root/$TAG"
@@ -33,12 +32,17 @@ jobs:
         uses: at-wat/assets-sync-action@v0.6.7
         with:
           repos: ice345/alist
-          github_token: ${{ secrets.GH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           git_user: ice345-bot
           git_email: ice345@example.com
           commit_message: "Sync Alist release assets from NewAlist/alist"
           branch: sync-release-assets
           root_dir: root
+
+      - name: Create GitHub Release
+        run: |
+          TAG_NAME="v$(date +'%Y%m%d%H%M%S')"
+          gh release create "$TAG_NAME" --title "Release $TAG_NAME" --notes "Automated release created by GitHub Actions" --target sync-release-assets
 
       - name: Cleanup
         run: rm -rf root upstream
