@@ -1,9 +1,12 @@
-name: Sync Alist Release Assets
+name: Sync Alist Release Assets and Create Release
 
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 3 * * *'
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   sync-assets:
@@ -39,13 +42,24 @@ jobs:
           branch: sync-release-assets
           root_dir: root
 
-      - name: Create GitHub Release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          TAG_NAME="v$(date +'%Y%m%d%H%M%S')"
-          gh release create "$TAG_NAME" --title "Release $TAG_NAME" --notes "Automated release created by GitHub Actions" --target sync-release-assets
+      - name: Set tag name
+        run: echo "TAG_NAME=v$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
 
+      - name: Create git tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git tag $TAG_NAME
+          git push origin $TAG_NAME
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: Release ${{ env.TAG_NAME }}
+          body: Automated release created by GitHub Actions
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Cleanup
         run: rm -rf root upstream
